@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Index Page</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+  </head>
+  <body>
+    <h1>Welcome to My HTML RENDERING</h1>
+    <a class="text-green" href="/about">About Page</a><br />
+    <a class="text-green" href="{% url 'posts' %}">Posts</a><br />
+    <a class="text-green" href="{% url 'create_user' %}">Create Account</a
+    ><br />
+    <img
+      src="{% static 'image/Goat.jpg' %}"
+      alt="Goat Image"
+      width="500"
+      height="500"
+    /><br />
+    <img
+      src="../static/image/Goat.jpg"
+      alt="Goat Image"
+      width="500"
+      height="500"
+    />
+  </body>
+</html>
